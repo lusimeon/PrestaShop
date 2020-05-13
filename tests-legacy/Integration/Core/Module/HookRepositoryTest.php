@@ -106,6 +106,9 @@ class HookRepositoryTest extends IntegrationTestCase
                     'ps_emailsubscription' => [
                         'except_pages' => ['category', 'product'],
                     ],
+                    'ps_featuredproducts' => [
+                        'only_pages' => ['category', 'product'],
+                    ],
                 ],
             ],
         ]);
@@ -114,6 +117,9 @@ class HookRepositoryTest extends IntegrationTestCase
             [
                 'ps_emailsubscription' => [
                     'except_pages' => ['category', 'product'],
+                ],
+                'ps_featuredproducts' => [
+                    'only_pages' => ['category', 'product'],
                 ],
             ],
             $this->hookRepository->getHooksWithModules()['displayTestHookNameWithExceptions']
